@@ -1,0 +1,382 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto:wght@100;300;500&display=swap');
+
+/*Formateos generales*/
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    min-height: 100vh;
+
+}
+
+header {
+    font-size: large;
+    display: grid;
+    justify-content: center;
+}
+
+footer {
+    padding: 3em;
+    margin-bottom: 0%;
+}
+
+/* Es para facilitar el maquetado
+.envoltura > *{
+    border-radius: 4px;
+    border: 4px solid black;
+ 
+
+}
+.contenedorFotos > *{
+    border-radius: 4px;
+    border: 4px solid black;
+*/
+
+
+a {
+    color: #F2F2F2;
+    text-decoration: none;
+}
+.formulario{
+    color: #404040;
+    font-weight: lighter;
+    font-size: 1em;
+    text-align:center;
+    font-family: 'Roboto', sans-serif;
+    margin: 30px;
+}
+.tituloForm{
+    color: #404040;
+    font-weight: lighter;
+    font-size: 1.3em;
+    text-align:center;
+    font-family: 'Roboto', sans-serif;
+    margin: 30px;
+}
+nav ul li {
+    color: #F2F2F2;
+    list-style-type: none;
+    font-weight: lighter;
+    background-color: #448AA6;
+}
+
+footer {
+    background-color: #404040;
+    color: #F2F2F2;
+}
+
+.licencia {
+    font-size: medium;
+    font-weight: lighter;
+}
+
+.instagram {
+    font-size: large;
+    font-weight: lighter;
+}
+
+.linkEnParrafo {
+    color: #448AA6;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 1em;
+}
+
+.sobreMi {
+    color: #404040;
+    font-weight: lighter;
+    font-size: 1em;
+
+}
+
+.presentacion {
+    margin: 5px;
+}
+
+/*Declaro las Grids Areas*/
+header {
+    grid-area: header;
+}
+
+nav {
+    grid-area: nav;
+}
+
+main {
+    grid-area: main;
+}
+
+footer {
+    grid-area: footer;
+}
+
+.quienSoy {
+    grid-area: quienSoy;
+}
+
+.sobreMi {
+    grid-area: sobreMi;
+}
+
+.imagenSobreMi {
+    grid-area: imagenSobreMi;
+}
+
+.tituloFotos {
+    grid-area: tituloFotos;
+}
+
+.galeria {
+    grid-area: galeria;
+}
+
+.tituloFotos {
+    color: #404040;
+    font-weight: lighter;
+    font-size: 1.2em;
+    margin: 10px;
+
+
+}
+
+.link {
+    color: #448AA6;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 1.2em;
+}
+
+/*Grid para Fotos*/
+.contenedorFotos {
+    display: grid;
+    gap: 10px;
+    grid-template-areas:
+        "nav"
+        "header"
+        "galeria"
+        "footer";
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns: auto;
+}
+.contenedorSM{
+    display: grid;
+    gap: 10px;
+    grid-template-areas:
+    "nav"
+    "header"
+    "main"
+    "footer";
+
+}
+.parrafoSobreMi{
+    margin: 1em;
+    font-weight: lighter;
+    color: #404040;
+}
+
+.sobreMi{
+    color: #404040;
+    font-size: 1.3em;
+    font-weight: normal;
+}
+/* Diseñamos Mobile First 
+Declaro los grids áreas*/
+
+/* Esquema mobile*/
+.envoltura {
+    display: grid;
+    gap: 10px;
+    grid-template-areas:
+        "nav"
+        "header"
+        "main"
+        "footer";
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns: auto;
+
+}
+
+.banner {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+
+}
+
+.titulo {
+    font-family: 'Permanent Marker', cursive;
+    color: #F2F2F2;
+    font-size: 2em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.tituloSM {
+    font-family: 'Permanent Marker', cursive;
+    color: #bebaba;
+    font-size: 1.3em;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+/* Esquema Tablet */
+@media(min-width : 500px) {
+    .envoltura {
+        display: grid;
+        gap: 10px;
+        grid-template-areas:
+            "nav nav"
+            "header header"
+            "main main"
+            "footer footer";
+        grid-template-rows: 50px auto auto 50px;
+        grid-template-columns: auto auto;
+    }
+
+    nav {
+        background-color: #448AA6;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 1em;
+        background-color: #448AA6;
+        align-items: center;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-bottom: 0%;
+    }
+
+    .titulo {
+        font-size: 3em;
+    }
+
+    /*Esquema Tablet Fotos*/
+    .contenedorFotos {
+        display: grid;
+        gap: 10px;
+        grid-template-areas:
+            "nav nav"
+            "header header"
+            "galeria galeria"
+            "footer footer";
+        grid-template-rows: auto auto auto auto;
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+    .padre {
+        background-color: #A68E80;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 15px;
+        margin: 3em;
+    }
+    .tituloSM {
+        font-family: 'Permanent Marker', cursive;
+        color: #bebaba;
+        font-size: 2em;
+        position:absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+
+
+
+    /* Esquema PC */
+    @media(min-width : 767px) {
+        .envoltura {
+            display: grid;
+            gap: 10px;
+            grid-template-areas:
+                "nav nav"
+                "header header"
+                "main main"
+                "footer footer";
+            grid-template-rows: 50px auto auto 50px;
+            grid-template-columns: 50% auto;
+        }
+
+        nav {
+            background-color: #448AA6;
+        }
+
+        nav ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 1em;
+            background-color: #448AA6;
+            align-items: center;
+        }
+
+        footer {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        .titulo {
+            font-size: 4em;
+        }
+
+        .presentacion {
+            display: grid;
+            gap: 10px;
+            grid-template-areas:
+                "quienSoy quienSoy"
+                "imagenSobreMi sobreMi";
+            grid-template-rows: 50px auto;
+            grid-template-columns: 50% auto;
+
+        }
+
+        .contenedorFotos {
+            display: grid;
+            gap: 10px;
+            grid-template-areas:
+                "nav nav"
+                "header header"
+                "galeria galeria"
+                "footer footer";
+            grid-template-rows: auto auto auto auto;
+            grid-template-columns: 1fr 1fr;
+
+        }
+
+        .padre {
+            background-color: #A68E80;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin: 3em;
+        }
+    }
+} 
+
