@@ -1,0 +1,28 @@
+Para el SEO de la Página.
+
+Imágenes con el agregado de loading= “Lazy”
+
+Cambio de título a cada página
+
+<title>Home - SoyFedeEme</title>
+
+<title>Sobre mi - SoyFedeEme</title> 
+
+<title>Fotos - SoyFedeEme</title>
+
+<title>Contacto - SoyFedeEme</title>
+
+<title>Blog - SoyFedeEme</title>
+
+Agregado de etiqueta Description a cada página
+
+Agregado de etiqueta     <meta name="description" content=""> en cada página
+
+Agregado etiquetas <meta name="author" content="FedeEme">
+    <meta name="copyright" content="Este sitio fue desarrollado por Federico">
+
+
+
+Próxima revisión usar etiqueta </picture>
+Agregar Open Graph
+Sitemap

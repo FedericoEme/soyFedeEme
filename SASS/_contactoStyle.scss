@@ -1,0 +1,92 @@
+
+.fotoForm{
+    width: 100vw;
+    height: auto;
+    margin-top: 10px;
+}
+.contenedor1C{
+    grid-area: c1C;
+}
+
+.cont2C{
+    grid-area: c2C;
+    img{
+        width: 100vw;
+        height: auto;
+        margin-top: 10px;
+    }
+}
+.contContacto{
+    grid-area: form;
+}
+
+.contenedor5C{
+    grid-area: c5C;
+}
+
+.tituloForm{
+    grid-area: tituloForm;
+    margin: 25px;
+    h1{
+        font-family: "Permanent Marker";
+        font-size: 2em;
+        color: $colorSobreMi;
+        text-align: center;
+    }
+
+}
+
+.formulario{
+    grid-area: formulario;
+    margin: 25px;
+    padding: 30px;
+    .btn-secondary{
+        align-items: center;
+        background-color: $colorLink;
+    }
+}
+
+.fotoForm{
+    grid-area: fotoForm;
+    width: 50%;
+    height: auto;
+    margin: 25px;
+}
+
+.contenedorForm{
+    display: grid;
+    grid-template-areas: 
+    "c1C"
+    "c2C"
+    "form"
+    "c5C";
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto;
+    justify-content: center;
+    
+}
+
+.contContacto{
+    display: grid;
+    grid-template-areas: 
+    "tituloForm"
+    "formulario"
+    "fotoForm";
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+    justify-items: center;
+}
+
+.contenedor1C {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: stretch;
+    background-color: $colorNavbar;
+  }
+  
+  .contenedor5C {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: stretch;
+    background-color: $colorFooter;
+  }

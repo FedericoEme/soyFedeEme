@@ -1,0 +1,640 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;800&family=Permanent+Marker&family=Roboto:wght@100;300;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto:wght@100;300;500&display=swap");
+/* Aplico cambios y estilos generales */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.logoIns img {
+  width: 50px;
+  height: auto;
+}
+
+/* Acomodo con flexbox el navbar y el footer */
+.contenedor1 {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.contenedor5 {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #404040;
+}
+
+/* Declaro las Grid areas del index */
+.contenedor1 {
+  grid-area: contenedor1;
+  background-color: #A68E80;
+}
+
+.contenedor2 {
+  grid-area: contenedor2;
+  padding: 20px;
+}
+
+.contenedor3 {
+  grid-area: contenedor3;
+  padding: 20px;
+}
+
+.contenedor4 {
+  grid-area: contenedor4;
+  padding: 20px;
+}
+
+.contenedor5 {
+  grid-area: contenedor5;
+  background-color: #404040;
+}
+
+.quiensoy {
+  grid-area: quienSoy;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.sobreMi {
+  grid-area: sobreMi;
+  margin: 20px;
+}
+
+.imagenSobreMi {
+  grid-area: imgSobreMi;
+  border-radius: 10px;
+}
+
+.seguime {
+  grid-area: seguime;
+}
+
+.img1 {
+  grid-area: img1;
+}
+
+.img2 {
+  grid-area: img2;
+}
+
+.img3 {
+  grid-area: img3;
+}
+
+.img4 {
+  grid-area: img4;
+}
+
+.img5 {
+  grid-area: img5;
+  width: 100%;
+  height: auto;
+}
+
+.img6 {
+  grid-area: img6;
+}
+
+/* Defino el grid principal */
+.grilla {
+  display: grid;
+  gap: 10px;
+  grid-template-areas: "contenedor1" "contenedor2" "contenedor3" "contenedor4" "contenedor5";
+  grid-template-columns: 100vw;
+  grid-template-rows: auto auto auto auto;
+  justify-items: stretch;
+}
+
+/* Grid dentro del contenedor 4 que contiene las fotos de Instgram */
+.galeriaIns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-row: 1fr 1fr 1fr;
+  justify-content: stretch;
+}
+
+.galeriaIns img {
+  width: 100%;
+  height: auto;
+}
+
+.logoIns img {
+  width: 50px;
+  height: auto;
+}
+
+/* Grid para la sección Sobre Mi */
+.seccion2 {
+  overflow: hidden;
+  display: grid;
+  grid-template-areas: "quienSoy" "sobreMi" "imgSobreMi";
+  grid-template-columns: 100vw;
+  grid-template-rows: auto auto auto;
+  justify-items: center;
+  align-items: center;
+}
+
+/* Ahora defino las media queries */
+@media (min-width: 768px) {
+  .titMobile {
+    display: none;
+  }
+  .galeriaIns {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row: 1fr 1fr;
+    justify-content: stretch;
+  }
+  .galeriaIns img {
+    width: 100%;
+    height: auto;
+  }
+  .logoIns img {
+    width: 50px;
+    height: auto;
+  }
+}
+@media (min-width: 1028px) {
+  .galeriaIns {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-row: 1fr;
+    justify-content: stretch;
+  }
+  .galeriaIns img {
+    width: 100%;
+    height: auto;
+  }
+  .logoIns img {
+    width: 50px;
+    height: auto;
+  }
+}
+.sF {
+  font-family: "Permanent Marker";
+  font-size: 4em;
+}
+
+.quienSoy h2 {
+  text-align: center;
+  font-family: "Permanent Marker";
+  color: #448AA6;
+  font-size: 3em;
+}
+
+.imagenSobreMi img {
+  margin: 20px;
+  padding: 10px;
+  width: 100vw;
+  height: auto;
+}
+
+.sobreMi p {
+  margin: 5px 20px 10px 20px;
+  padding: 5px;
+  text-align: justify;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+}
+
+.seguime {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5em;
+  margin: 10px;
+  margin-bottom: 15px;
+  padding: 5px;
+  transition: color 1s;
+}
+
+.seguime:hover {
+  color: #448AA6;
+}
+
+.licencia {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 1ex;
+  margin: 10px;
+  margin-bottom: 15px;
+  padding: 5px;
+}
+
+.contenedor5 img {
+  width: 20px;
+  height: auto;
+}
+
+.inst {
+  width: 25px;
+  height: auto;
+}
+
+.titMobile {
+  font-family: "Permanent Marker";
+  font-size: 2.5em;
+  color: white;
+  margin: 10px;
+  padding: 5px;
+  text-align: center;
+  position: absolute;
+  right: 27%;
+  top: 55%;
+}
+
+.linkEnParrafo {
+  font-family: "Permanent Marker";
+  color: #448AA6;
+  font-size: 1.5em;
+  text-decoration: none;
+}
+
+/* Maquetado de la parte general de la página */
+.contenedor1F {
+  grid-area: c1F;
+}
+
+.contenedor2F {
+  grid-area: c2F;
+}
+.contenedor2F .tituloFotos {
+  font-family: "Permanent Marker";
+  font-size: 3em;
+  color: #448AA6;
+  text-align: center;
+  margin: 20px;
+}
+
+.contenedor5F {
+  grid-area: c5F;
+}
+
+.contPrincF {
+  display: grid;
+  grid-template-areas: "c1F" "c2F" "c5F";
+  grid-template-columns: auto;
+  grid-template-rows: auto auto auto;
+  justify-content: center;
+}
+
+.contenedor1F {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: stretch;
+  background-color: #A68E80;
+}
+
+.contenedor5F {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: stretch;
+  background-color: #404040;
+}
+
+/* Ahora comienzo el diseño de la galería */
+.galleryContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 150px;
+  padding: 20px;
+  grid-gap: 10px;
+}
+
+.galleryImg {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.galleryItem:nth-child(4) {
+  grid-column-start: span 2;
+}
+
+.galleryItem:nth-child(5) {
+  grid-row-start: span 3;
+}
+
+.galleryItem:nth-child(6) {
+  grid-row-start: span 3;
+}
+
+.galleryItem:nth-child(9) {
+  grid-column-start: span 2;
+}
+
+/* Defino las mediasqueries */
+@media (min-width: 768px) {
+  .galleryContainer {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .galleryItem:nth-child(3) {
+    grid-column-start: span 2;
+  }
+}
+@media (min-width: 1024px) {
+  .galleryContainer {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .galleryItem:nth-child(1) {
+    grid-row-start: span 2;
+  }
+  .galleryItem:nth-child(2) {
+    grid-column-start: span 2;
+    grid-row-start: span 2;
+  }
+  .galleryItem:nth-child(5) {
+    grid-column-start: span 2;
+    grid-row-start: span 3;
+  }
+  .galleryItem:nth-child(9) {
+    grid-column-start: span 2;
+    grid-row-start: span 2;
+  }
+}
+.contenedor1SM {
+  grid-area: c1SM;
+  background-color: #A68E80;
+}
+
+.cont2SM {
+  grid-area: c2SM;
+}
+
+.contenedor5SM {
+  grid-area: c5SM;
+  background-color: #404040;
+}
+
+.yo {
+  text-align: center;
+  font-family: "Permanent Marker";
+  color: #448AA6;
+  font-size: 3em;
+  margin: 20px;
+}
+
+.parrafoSobreMi {
+  margin: 20px;
+  padding: 5px;
+  text-align: justify;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+}
+
+/* Defino la grid Principal */
+.contenedorSM {
+  display: grid;
+  gap: 10px;
+  grid-template-areas: "c1SM" "c2SM" "c5SM";
+  grid-template-columns: auto;
+  grid-template-rows: auto auto auto;
+  justify-items: stretch;
+}
+
+/* Acomodo con flexbox el navbar y el footer */
+.contenedor1SM {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.contenedor5SM {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #404040;
+}
+
+.contenido {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+.contenido img {
+  width: 100%;
+  height: auto;
+}
+
+.contenedor5SM img {
+  width: 25px;
+  height: auto;
+}
+
+.fotoForm {
+  width: 100vw;
+  height: auto;
+  margin-top: 10px;
+}
+
+.contenedor1C {
+  grid-area: c1C;
+}
+
+.cont2C {
+  grid-area: c2C;
+}
+.cont2C img {
+  width: 100vw;
+  height: auto;
+  margin-top: 10px;
+}
+
+.contContacto {
+  grid-area: form;
+}
+
+.contenedor5C {
+  grid-area: c5C;
+}
+
+.tituloForm {
+  grid-area: tituloForm;
+  margin: 25px;
+}
+.tituloForm h1 {
+  font-family: "Permanent Marker";
+  font-size: 2em;
+  color: #448AA6;
+  text-align: center;
+}
+
+.formulario {
+  grid-area: formulario;
+  margin: 25px;
+  padding: 30px;
+}
+.formulario .btn-secondary {
+  align-items: center;
+  background-color: #448AA6;
+}
+
+.fotoForm {
+  grid-area: fotoForm;
+  width: 50%;
+  height: auto;
+  margin: 25px;
+}
+
+.contenedorForm {
+  display: grid;
+  grid-template-areas: "c1C" "c2C" "form" "c5C";
+  grid-template-columns: auto;
+  grid-template-rows: auto auto auto auto;
+  justify-content: center;
+}
+
+.contContacto {
+  display: grid;
+  grid-template-areas: "tituloForm" "formulario" "fotoForm";
+  grid-template-columns: auto;
+  grid-template-rows: auto auto auto;
+  justify-items: center;
+}
+
+.contenedor1C {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: stretch;
+  background-color: #A68E80;
+}
+
+.contenedor5C {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: stretch;
+  background-color: #404040;
+}
+
+/* Primero maqueto el esqueleto de la página */
+.contenedor1B {
+  grid-area: cont1B;
+}
+
+.contMain {
+  grid-area: contMain;
+}
+.contMain .banner {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.contMain h1 {
+  font-family: "Permanent Marker";
+  font-size: 2.5em;
+  color: #448AA6;
+  text-align: center;
+  margin: 20px;
+}
+.contMain p {
+  margin: 20px;
+  padding: 10px;
+  font-family: "Roboto";
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.contEntradas {
+  grid-area: contEntradas;
+}
+
+.contenedor5B {
+  grid-area: cont5B;
+}
+
+.contenedorBlog {
+  display: grid;
+  grid-template-areas: "cont1B" "contMain" "contEntradas" "cont5B";
+  grid-template-columns: auto;
+  grid-template-rows: auto auto auto auto;
+  justify-content: center;
+}
+
+/* Formateo el navbar y el footer con Flexbox */
+.contenedor1B {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: stretch;
+  background-color: #A68E80;
+}
+
+.contenedor5B {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: stretch;
+  background-color: #404040;
+}
+.contenedor5B .logoIns img {
+  width: 50px;
+  height: auto;
+}
+
+/* Doy formato al grid de las entradas del blog */
+.fD1 {
+  grid-area: fD1;
+  margin: 20px;
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.texto1 {
+  grid-area: texto1;
+  margin: 30px;
+  padding: 10px;
+  text-align: center;
+}
+
+.fD2 {
+  grid-area: fD2;
+  margin: 20px;
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.texto2 {
+  grid-area: texto2;
+  margin: 30px;
+  padding: 10px;
+  text-align: center;
+}
+
+.ent1 {
+  display: grid;
+  grid-template-areas: "fD1 texto1" "fD1 texto1" "fD1 texto1";
+  grid-template-columns: 2fr 2fr;
+  background-color: #F2F2F2;
+}
+
+.ent2 {
+  display: grid;
+  grid-template-areas: "fD2 texto2" "fD2 texto2" "fD2 texto2";
+  grid-template-columns: 2fr 2fr;
+  background-color: #F2F2F2;
+}
+
+.entrada {
+  text-align: justify;
+}/*# sourceMappingURL=style.css.map */

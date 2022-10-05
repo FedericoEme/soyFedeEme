@@ -1,0 +1,111 @@
+/* Maquetado de la parte general de la página */
+
+.contenedor1F{
+    grid-area: c1F;
+}
+.contenedor2F{
+    grid-area: c2F;
+        .tituloFotos{
+            font-family: "Permanent Marker";
+            font-size: 3em;
+            color: $colorSobreMi;
+            text-align: center;
+            margin: 20px;
+        }
+}
+
+.contenedor5F{
+    grid-area: c5F;
+
+}
+
+.contPrincF{
+    display: grid;
+    grid-template-areas: 
+    "c1F"
+    "c2F"
+    "c5F";
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+    justify-content: center;
+    
+}
+
+.contenedor1F {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: stretch;
+    background-color: $colorNavbar;
+  }
+  
+  .contenedor5F {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: stretch;
+    background-color: $colorFooter;
+  }
+
+  /* Ahora comienzo el diseño de la galería */
+.galleryContainer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 150px;
+    padding: 20px;
+    grid-gap: 10px;
+
+}
+.galleryImg{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.galleryItem:nth-child(4){
+    grid-column-start: span 2;
+}
+.galleryItem:nth-child(5){
+    grid-row-start: span 3;
+}
+.galleryItem:nth-child(6){
+    grid-row-start: span 3;
+}
+
+.galleryItem:nth-child(9){
+    grid-column-start: span 2;
+}
+
+/* Defino las mediasqueries */
+
+@media (min-width: 768px){
+    .galleryContainer{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .galleryItem:nth-child(3){
+        grid-column-start: span 2;
+    }
+
+}
+
+@media (min-width: 1024px){
+    .galleryContainer{
+        grid-template-columns: repeat(5, 1fr);
+    }
+    .galleryItem:nth-child(1){
+        grid-row-start: span 2;
+        
+    }
+    .galleryItem:nth-child(2){
+        grid-column-start: span 2;
+        grid-row-start: span 2;
+    }
+    .galleryItem:nth-child(5){
+        grid-column-start: span 2;
+        grid-row-start: span 3;
+    }
+    .galleryItem:nth-child(9){
+        grid-column-start: span 2;
+        grid-row-start: span 2;
+    }
+
+
+}

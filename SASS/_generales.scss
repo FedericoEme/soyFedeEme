@@ -1,0 +1,33 @@
+/* Aplico cambios y estilos generales */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+.logoIns img {
+  width: 50px;
+  height: auto;
+}
+/* Acomodo con flexbox el navbar y el footer */
+.contenedor1 {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.contenedor5 {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: $colorFooter;
+}

@@ -1,0 +1,172 @@
+/* Declaro las Grid areas del index */
+.contenedor1 {
+    grid-area: contenedor1;
+    background-color: $colorNavbar;
+  }
+  
+  .contenedor2 {
+    grid-area: contenedor2;
+    
+    padding: 20px;
+  }
+  
+  .contenedor3 {
+    grid-area: contenedor3;
+    
+    padding: 20px;
+    
+  }
+  
+  .contenedor4 {
+    grid-area: contenedor4;
+    
+    padding: 20px;
+  }
+  
+  .contenedor5 {
+    grid-area: contenedor5;
+    background-color: $colorFooter;
+  }
+  
+  .quiensoy {
+    grid-area: quienSoy;
+    margin-top: 30px;
+    text-align: center;
+  }
+  
+  .sobreMi {
+    grid-area: sobreMi;
+    margin: 20px;
+  }
+  
+  .imagenSobreMi {
+    grid-area: imgSobreMi;
+    border-radius: 10px;
+   }
+  
+  .seguime {
+    grid-area: seguime;
+  }
+  
+  .img1 {
+    grid-area: img1;
+    
+  }
+  
+  .img2 {
+    grid-area: img2;
+  
+  }
+  
+  .img3 {
+    grid-area: img3;
+  
+  }
+  
+  .img4 {
+    grid-area: img4;
+   
+  }
+  
+  .img5 {
+    grid-area: img5;
+    width: 100%;
+    height: auto;
+  }
+  
+  .img6 {
+    grid-area: img6;
+   
+  }
+  
+  
+  /* Defino el grid principal */
+  .grilla {
+    display: grid;
+    gap: 10px;
+    grid-template-areas: 
+    "contenedor1"
+    "contenedor2"
+    "contenedor3"
+    "contenedor4"
+    "contenedor5";
+    grid-template-columns: 100vw;
+    grid-template-rows: auto auto auto auto;
+    justify-items: stretch;
+    
+  }
+  
+  /* Grid dentro del contenedor 4 que contiene las fotos de Instgram */
+  .galeriaIns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row: 1fr 1fr 1fr;
+    justify-content:stretch;
+  }
+  
+  .galeriaIns img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .logoIns img {
+    width: 50px;
+    height: auto;
+  }
+  
+  /* Grid para la sección Sobre Mi */
+  .seccion2{
+    overflow: hidden;
+    display: grid;
+    grid-template-areas: 
+    "quienSoy"
+    "sobreMi"
+    "imgSobreMi"
+    ;
+    grid-template-columns: 100vw;
+    grid-template-rows: auto auto auto;
+    justify-items: center;
+    align-items: center;
+  
+  }
+
+  /* Ahora defino las media queries */
+
+@media(min-width: 768px){
+    .titMobile{
+      display: none;
+    }
+    .galeriaIns {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-row: 1fr 1fr;
+      justify-content: stretch;
+    }
+    .galeriaIns img {
+      width: 100%;
+      height: auto;
+    }
+    
+    .logoIns img {
+      width: 50px;
+      height: auto;
+    }
+  }
+  
+  @media(min-width: 1028px){
+    .galeriaIns {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-row: 1fr;
+      justify-content: stretch;
+    }
+    .galeriaIns img {
+      width: 100%;
+      height: auto;
+    }
+    
+    .logoIns img {
+      width: 50px;
+      height: auto;
+    }
+  }

@@ -1,0 +1,131 @@
+/* Primero maqueto el esqueleto de la página */
+.contenedor1B{
+    grid-area: cont1B;
+}
+
+.contMain{
+    grid-area: contMain;
+        .banner{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            
+        }
+        h1{
+            font-family: "Permanent Marker";
+            font-size: 2.5em;
+            color: $colorSobreMi;
+            text-align: center;
+            margin: 20px;
+            
+        }
+        p{
+            margin: 20px;
+            padding: 10px;
+            font-family: "Roboto";
+            font-size: 1.5em;
+            text-align: center;
+        }
+}
+
+.contEntradas{
+    grid-area: contEntradas;
+}
+
+.contenedor5B{
+    grid-area: cont5B;
+}
+
+.contenedorBlog{
+    display: grid;
+    grid-template-areas:
+    "cont1B"
+    "contMain"
+    "contEntradas"
+    "cont5B";
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto;
+    justify-content: center;
+}
+
+/* Formateo el navbar y el footer con Flexbox */
+.contenedor1B {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: stretch;
+    background-color: $colorNavbar;
+  }
+  
+  .contenedor5B {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: stretch;
+    background-color: $colorFooter;
+     .logoIns {
+        img{
+            
+                width: 50px;
+                height: auto;
+              
+        }
+      }
+  }
+ 
+  /* Doy formato al grid de las entradas del blog */
+
+  .fD1{
+    grid-area: fD1;
+    margin: 20px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;    
+  }
+
+  .texto1 {
+    grid-area: texto1;
+    margin: 30px;
+    padding: 10px;
+    text-align: center;
+    
+  }
+
+  .fD2{
+    grid-area: fD2;
+    margin: 20px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;  
+  }
+
+  .texto2{
+    grid-area: texto2;
+    margin: 30px;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .ent1{
+    display: grid;
+    grid-template-areas: 
+    "fD1 texto1"
+    "fD1 texto1"
+    "fD1 texto1";
+    grid-template-columns: 2fr 2fr;
+    background-color: $colorFondo;
+
+  }
+
+  .ent2{
+    display: grid;
+    grid-template-areas: 
+    "fD2 texto2"
+    "fD2 texto2"
+    "fD2 texto2";
+    grid-template-columns: 2fr 2fr;
+    background-color: $colorFondo;
+
+  }
+
+.entrada{
+  text-align: justify;
+}

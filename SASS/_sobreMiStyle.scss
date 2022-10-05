@@ -1,0 +1,73 @@
+.contenedor1SM{
+    grid-area: c1SM;
+    background-color: $colorNavbar;
+}
+.cont2SM{
+    grid-area: c2SM;
+    
+    
+    
+}
+
+.contenedor5SM{
+    grid-area: c5SM;
+    background-color: $colorFooter;
+}
+.yo{
+    text-align: center;
+    font-family: "Permanent Marker";
+    color: $colorSobreMi;
+    font-size: 3em;
+    margin: 20px;
+}
+.parrafoSobreMi{
+    margin: 20px;
+    padding: 5px;
+    text-align:justify;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+}
+/* Defino la grid Principal */
+
+.contenedorSM{
+    display: grid;
+    gap: 10px;
+    grid-template-areas: 
+    "c1SM"
+    "c2SM"
+    "c5SM";
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+    justify-items: stretch;
+}
+
+/* Acomodo con flexbox el navbar y el footer */
+.contenedor1SM {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  .contenedor5SM {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: $colorFooter;
+  }
+
+  .contenido{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+        img{
+            width: 100%;
+            height: auto;
+        }
+  }
+
+  .contenedor5SM img{
+    width: 25px;
+    height: auto;
+  }
